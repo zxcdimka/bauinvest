@@ -1,0 +1,221 @@
+@mixin load-font($name,$style,$types,$formats)
+{
+  @each $type, $weight in $types
+  {
+    @font-face
+    {
+      src: get-font-src($name, $type, $formats);
+      font-family: $name;
+      font-weight: $weight;
+      font-style: $style;
+    }
+  }
+}
+@mixin ava()
+{
+  color: $color-text-laravel ;
+  & i{
+    padding: 0.15em;
+    border-radius: 1em;
+    width: 1.7em;
+    height: 1.7em;
+    border: 0.13em solid $color-text-laravel;
+  }
+}
+
+@mixin text-over()
+{
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+@mixin select()
+{
+  position: relative;
+  display: inline-block;
+  &-wrapper {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    select {
+      display: none;
+    }
+  }
+  &-trigger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+     // content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 100 320 320'><path fill='#{$color-arter}' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'></path></svg>");
+      width: 11px;
+      height: 100%;
+      border: none;
+      vertical-align: unset;
+      right: -11px;
+      @include transition(transform, .15s, ease-out);
+      transform-origin:  50% 50%;
+      padding: 0;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  &.opened {
+    .custom-options {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+    .custom-selects-trigger:after {
+      -o-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+      -moz-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+      @include transition(transform 0.25s ease-out 0s);
+    }
+  }
+  .custom-options {
+
+    position: absolute;
+    display: block;
+    z-index: 30;
+    box-sizing: border-box;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    background: #fff;
+    @include transition();
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    .custom-option {
+      position: relative;
+      display: block;
+      line-height: 38px;
+      cursor: pointer;
+      @include transition(all, .15s, ease-in-out);
+
+      &:first-of-type {
+        border-radius: 4px 4px 0 0;
+      }
+      &:last-of-type {
+        border-bottom: 0;
+        border-radius: 0 0 4px 4px;
+      }
+      &:hover,
+      &.selection {
+        background: #f9f9f9;
+      }
+
+    }
+    .option-hover:before {
+      background: #f9f9f9;
+    }
+  }
+
+
+
+}
+
+@mixin fit-content($st: width)
+{
+  #{$st}: fit-content;
+  #{$st}: -moz-fit-content;
+  #{$st}: -webkit-max-content;
+}
+
+@mixin clear()
+{
+  padding: 0;
+  margin: 0;
+}
+
+@mixin clear-all()
+{
+  @include clear();
+  border: 0;
+  outline: 0;
+}
+@mixin clear-border(){
+  &:active, &:hover, &:focus {
+    box-shadow: none;
+  }
+}
+
+@mixin font($size: $font-default-size, $line: inherit, $weight: inherit, $color: inherit, $style: inherit)
+{
+  font:
+  {
+    size: $size;
+    weight: $weight;
+    style: $style;
+  }
+  color: $color;
+  line-height: $line;
+}
+
+@mixin transition($what: all, $speed: $transition-default-speed, $ease: ease-in-out, $stop: 0s)
+{
+  transition: $what $speed $ease $stop;
+  -webkit-transition: $what $speed $ease $stop ;
+  -moz-transition: $what $speed $ease $stop;
+  -o-transition: $what $speed $ease $stop;
+}
+
+//чекбоксы
+
+@mixin checkbox-theme-switcher($name, $color){
+
+  [data-checkbox-theme="switcher-#{$name}"]{
+    cursor: pointer;
+    width: 40px;
+    height: 16px;
+    vertical-align: bottom;
+    @media (max-width: $step-xs) {
+      width: 30px;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    &:before {
+      background-color: lightgrey;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    &:after {
+      cursor: pointer;
+      background-color: white;
+      width: 24px;
+      height: 24px;
+      top: -4px;
+      left: -4px;
+      content: ' ';
+      border-radius: 50%;
+      box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+      @media (max-width: $step-xs) {
+        top: -1px;
+        width: 19px;
+        height: 19px;
+      }
+    }
+    &:checked:after {
+      left: 20px;
+      background-color: $color;
+      @media (max-width: $step-xs) {
+        left: 15px;
+      }
+    }
+    &:checked:before {
+      background-color: $color_main_light;
+      box-shadow: inset 0px 0px 10px rgba(0,0,0,.1);
+    }
+  }
+}
+
+

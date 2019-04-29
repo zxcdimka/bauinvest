@@ -1,0 +1,17 @@
+@function get-font-src($name, $type, $formats)
+{
+  $first: true;
+  $return: '';
+  $prefix: url;
+  $return: $prefix + $return;
+  @each $extension, $format in $formats
+  {
+    $point: ', url';
+    @if($first) {$point: ''; $first: false;}
+    @if($extension == 'eot') {$extension: $extension + '?iefix'}
+    $return: $return + $point + "('#{$font-path}/#{$name}/#{$name}-#{$type}.#{$extension}') format('#{$format}')";
+  }
+
+
+  @return $return;
+}

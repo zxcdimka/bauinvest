@@ -1,0 +1,87 @@
+.yc{
+
+  display: flex!important;
+  align-items: center!important;
+}
+.yt{
+  display: flex!important;
+  align-items: start !important;
+}
+.yb{
+  display: flex!important;
+  align-items: end!important;
+}
+
+.xl{
+  display: flex!important;
+  justify-content: flex-start!important;
+}
+.xc{
+  display: flex!important;
+  justify-content: center!important;
+}
+.xr{
+  display: flex!important;
+  justify-content: flex-end!important;
+}
+.hide-xl
+{
+  @media (min-width: $step-xl-)
+  {
+    display: none !important;
+  }
+}
+
+.hide-lg
+{
+  @media (min-width:$step-lg-) and (max-width: $step-xl)
+  {
+    display: none !important;
+  }
+}
+
+.hide-md
+{
+  @media (min-width: $step-md-) and (max-width: $step-lg)
+  {
+    display: none !important;
+  }
+}
+
+.hide-sm
+{
+  @media (min-width: $step-sm-) and (max-width: $step-md)
+  {
+    display: none !important;
+  }
+}
+
+.hide-xs
+{
+  @media (min-width: $step-xs-) and (max-width:$step-sm)
+  {
+    display: none !important;
+  }
+}
+
+.hide-mm
+{
+  @media (max-width: $step-xs)
+  {
+    display: none !important;
+  }
+}
+
+.full-height
+{
+  height: 100%;
+}
+
+input[placeholder] {text-overflow:ellipsis;}
+input::-moz-placeholder {text-overflow:ellipsis;}
+input:-moz-placeholder {text-overflow:ellipsis;}
+input:-ms-input-placeholder {text-overflow:ellipsis;}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder {color: transparent}
+:focus:-moz-placeholder {color: transparent}
+:focus:-ms-input-placeholder {color: transparent}
