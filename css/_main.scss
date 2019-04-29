@@ -1,3 +1,6 @@
+@import "typography";
+@import "mixins";
+
 html{
   font-size: 100%;
 }
@@ -11,15 +14,233 @@ body{
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background-color: $color-body-background;
 }
 
-@import "typography";
-@import "mixins";
-
 .header {
-  height: 50px;
   display: flex;
-  background-color: $color_main;
-  color: #333;
+  flex-direction: column;
+  &-wrapper{
+    @media (max-width: $step-xs) {
+      flex-flow: column;
+    }
+  }
+  &-wrap{
+    display: flex;
+    width: inherit;
+    @media (max-width: $step-lg-) {
+      flex-flow: column;
+    }
+  }
+  &-info{
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: flex-end;
+    padding-top: 6px;
+    .tel{
+      @include font(24px,1,700);
+      padding-bottom: 7px;
+    }
+    .email{
+      @include font(16px,1,400);
+    }
+
+    @media (max-width: $step-xs) {
+      align-items: center;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+  }
+  .red-button-lx{
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: $step-lg-) and (min-width: $step-xs) {
+      height: 50px;
+      margin-left: auto;
+      margin-right: 0;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    @media (max-width: $step-xs) {
+      height: 50px;
+      padding-left: 54px;
+      padding-right: 54px;
+    }
+  }
+  &-panel{
+    font-family: $font-family;
+    height: 110px;
+    background-color: $yellow ;
+    display: flex;
+    @media (max-width: $step-xs) { height: auto;}
+    & .logo{
+      img{
+        @media (min-width: $step-md){ min-width: 308px;}
+        @media (min-width: $step-sm){ min-width: 277px;}
+      }
+
+      @media (max-width: $step-xs) {
+        @include fit-content();
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &-meny{
+    background-color: #fafafa;
+    height: 80px;
+    ul{
+      display: flex;
+      flex-flow: nowrap row;
+      justify-content: left;
+      align-items: center;
+      li{
+        a{
+          @include font(16px,1.2,700);
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        list-style-type: none;
+        padding-right: 50px;
+
+      }
+    }
+  }
+}
+.container{
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  font-family: $font-family;
+  @media (min-width: $step-lg ) {
+    max-width: 1170px !important;
+  }
+}
+
+#mainCarouselIndicators{
+  .carousel-inner{
+    border-radius: 5px;
+    @media (min-width: $step-lg)  {
+      min-height: 476px;
+    }
+  }
+  .carousel-item{
+    @media (min-width: $step-lg)  {
+      width: 750px;
+    }
+  }
+  .carousel-indicators {
+    margin-bottom: 7px;
+    li{
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      opacity: 1;
+      border-radius: 100%;
+      margin-left: 8px;
+      margin-right: 8px;
+      &.active{
+        background-color: $yellow;
+      }
+    }
+  }
+}
+.form-top{
+  padding: 28px 32px 28px 32px;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  background-color: $yellow;
+  border-radius: 5px;
+  height: 100%;
+
+  & form{
+    margin-top: 6px;
+    .input{
+      @include font(17px,1.2,400);
+      height: 44px;
+      width: 100%;
+      background: unset;
+      border: 1px solid black;
+      padding: 5px 10px 5px 10px;
+    }
+    .textarea{
+      @include font(17px,1.2,400);
+      padding: 10px 10px 5px 10px;
+      width: 100%;
+      background: unset;
+      border: 1px solid black;
+      height: 105px;
+    }
+    .submit{
+      margin-top: 22px;
+      border: 0;
+      margin-left: auto;
+    }
+    label{
+      margin-bottom: 0;
+      margin-top: 18px;
+      @include font(14px,1.2,400);
+    }
+  }
+}
+#bauinvest_this{
+  margin-top: 70px;
+}
+
+footer{
+  background-color: $grau-light;
+  min-height: 190px;
+  padding-top: 55px;
+  padding-bottom: 50px;
+  .red-button-lx{
+    max-width: 295px;
+    @media (min-width: $step-lg) {
+      max-width: 270px;
+      margin-left: auto;
+    }
+    @media (max-width: $step-md) {
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+  }
+  .footer-meny {
+      display: flex;
+      flex-flow: column wrap;
+      margin-bottom: 0;
+    @media (max-width: $step-md) {
+      flex-flow: column nowrap;
+      max-height: unset !important;
+    }
+      li{
+        list-style-type: none;
+        padding-bottom: 7px;
+        a{
+          @include font(16px,1.1,700);
+          text-transform: uppercase;
+        }
+        @media (max-width: $step-md) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+  }
+  .logo{
+    display: flex;
+    flex-flow: column;
+    @media (max-width: $step-md) {
+      align-items: center;
+    }
+    a {
+      width: 100%;
+      max-width: 280px;
+
+    }
+    .copy{
+      margin-top: 7px;
+      @include font(14px,1.2,400);
+    }
+  }
 }

@@ -4,30 +4,68 @@ body, div, form, h1, h2, h3, h4, h5, h6, html, li, ol, p, pre, span, ul, figure 
   outline: 0;
 }
 
-h1
+h1, .h-1
 {
-  @include font(36px,1.2,400);
+  @include font(48px,1.2,700);
 }
 
-h2
+h2, .h-2
 {
-  font-size: 18px;
-  font-weight: 600;
+  @include font(48px,1.2,700);
 }
 
-h3
+h3, .h-3
 {
-  @include font(22px,1.4,500);
+  @include font(36px,1.2,700);
 }
-
-h4
+h4, .h-4
 {
-  @include font(16px,1.5,700);
+  @include font(24px,1.2,700);
 }
 
 p
 {
-  @include font();
+  @include font(24px,1.25,400);
+}
+input:focus{
+  outline:none;
+}
+
+%red-button {
+  @include fit-content();
+  text-transform: uppercase;
+  color: white !important;
+  text-decoration: none !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: nowrap row;
+  white-space: nowrap;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(255,108,0,0.7);
+  background-color: #df1e25;
+  @include font(16px,1,700);
+  &:hover{
+    @include transition();
+    box-shadow: 0 0 18px rgba(255,108,0,0.8);
+    background-color: #df4940;
+  }
+
+}
+.red-button{
+  &-lx{
+    @extend %red-button;
+    padding-left: 70px ;
+    padding-right: 70px ;
+  }
+  &-mm{
+    @extend %red-button;
+    padding-left: 28px ;
+    padding-right: 28px ;
+  }
 }
 
 img
@@ -35,17 +73,4 @@ img
   @include clear-all();
   max-width: 100%;
   line-height: 1;
-}
-a
-{
-  @include transition();
-  color: unset;
-  font-weight: 600;
-  background-color: transparent;
-  &:hover
-  {
-    color: unset;
-    @include transition();
-    text-decoration: none;
-  }
 }
