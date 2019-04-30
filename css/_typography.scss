@@ -12,11 +12,17 @@ h1, .h-1
 h2, .h-2
 {
   @include font(48px,1.2,700);
+  @media (max-width: $step-md) {
+    @include font(34px,1.2,700);
+  }
 }
 
 h3, .h-3
 {
   @include font(36px,1.2,700);
+  @media (max-width: $step-md) {
+    @include font(28px,1.2,700);
+  }
 }
 h4, .h-4
 {
@@ -25,7 +31,7 @@ h4, .h-4
 
 p
 {
-  @include font(24px,1.25,400);
+  @include font(24px,1.4,400,$text-gray);
 }
 input:focus{
   outline:none;
@@ -45,13 +51,13 @@ input:focus{
   height: 60px;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(255,108,0,0.7);
+  box-shadow: 0 0 23px rgba(255,108,0,0.8);
   background-color: #df1e25;
   @include font(16px,1,700);
   &:hover{
     @include transition();
-    box-shadow: 0 0 18px rgba(255,108,0,0.8);
-    background-color: #df4940;
+    box-shadow: 0 0 28px rgba(255,108,0,0.85);
+    background-color: #ca242a;
   }
 
 }

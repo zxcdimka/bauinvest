@@ -1,3 +1,4 @@
+
 </div>
 
 <footer>
@@ -26,12 +27,8 @@
 
 </body>
 
-
-<link rel="stylesheet" href="css/app.css">
-<link rel="stylesheet" href="assets/bootstrap-4.1.3/bootstrap.min.css">
-<link rel="stylesheet" href="assets/fontawesome-free-5.7.2-web/css/all.css">
-<link rel="stylesheet" href="assets/fancybox-master/dist/jquery.fancybox.min.css">
-<script src="assets/fancybox-master/dist/jquery.fancybox.js"
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/fancybox-master/dist/jquery.fancybox.js"></script>
 <script src="js/js.js"></script>
 
 </html>

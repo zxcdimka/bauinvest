@@ -10,6 +10,15 @@
 )
 );
 
+@font-face{
+  font-family: 'GothamProBlack';
+  src: url('../fonts/GothamPro/GothamPro-Black.eot');
+  src: url('../fonts/GothamPro/GothamPro-Black.eot?iefix') format('eot'),
+  url('../fonts/GothamPro/GothamPro-Black.woff') format('woff'),
+  url('../fonts/GothamPro/GothamPro-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @include load-font('Roboto', normal, (
         Thin: 100,
