@@ -19,11 +19,32 @@
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="red-button-lx  w-lg-100 "> Обратный звонок</div>
+                <div onclick="showPopup('#showPopap_')"  class="red-button-lx  w-lg-100 "> Обратный звонок</div>
             </div>
         </div>
     </div>
 </footer>
+<div class="popup" id="showPopap_">
+    <div class="popup_content-fix">
+        <div class="popup_content">
+            <div class="popup_close" title="Закрыть">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="form-top">
+                <div class="h-4">Обратная связь</div>
+                <form action=""  >
+                    <label for="top-form-name">Введите имя</label>
+                    <input required class="input" type="text" name="name" id="top-form-name">
+                    <label for="top-form-tel">Телефон для связи</label>
+                    <input required class="input" type="text" name="tel" id="top-form-tel">
+                    <label for="top-form-text">Сообщение</label>
+                    <textarea required class="textarea" name="text"  id="top-form-text"></textarea>
+                    <input type="submit" class="red-button-mm submit" >
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 

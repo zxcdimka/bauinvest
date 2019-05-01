@@ -7,17 +7,17 @@
                 <div id="mainCarouselIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#mainCarouselIndicators" data-slide-to="0" class="active"></li>
-                        <!--                    <li data-target="#mainCarouselIndicators" data-slide-to="1"></li>
-                                        <li data-target="#mainCarouselIndicators" data-slide-to="2"></li>
-                                        <li data-target="#mainCarouselIndicators" data-slide-to="3"></li>
-                                        <li data-target="#mainCarouselIndicators" data-slide-to="4"></li>
-                                        <li data-target="#mainCarouselIndicators" data-slide-to="5"></li>-->
+                        <li data-target="#mainCarouselIndicators" data-slide-to="1"></li>
+                        <li data-target="#mainCarouselIndicators" data-slide-to="2"></li>
+                        <li data-target="#mainCarouselIndicators" data-slide-to="3"></li>
+                        <li data-target="#mainCarouselIndicators" data-slide-to="4"></li>
+                        <li data-target="#mainCarouselIndicators" data-slide-to="5"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="img/ROB_7201.png" alt="First slide">
                         </div>
-                        <!--<div class="carousel-item">
+                        <div class="carousel-item">
                             <img class="d-block w-100" src="img/ROB_7201.png" alt="Second slide">
                         </div>
                         <div class="carousel-item">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="img/ROB_7201.png" alt="Third slide">
-                        </div>-->
+                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#mainCarouselIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -100,7 +100,7 @@
                         Круглосуточная отгрузка
                     </div>
                 </div>
-                <a href="" class="red-button-mm">Обратный звонок</a>
+                <a href="javascript:vid(0)" onclick="showPopup('#showPopap_')"  class="red-button-mm">Обратный звонок</a>
             </div>
             <div class="col-12 col-md-7 ">
                 <img src="img/map.png" id="bau_map_map" alt="">
@@ -187,6 +187,48 @@
                 <div class="regular-item xc" >
                     <img src="img/slid.png">
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="licenzii">
+    <div class="container">
+        <h2 class="h-2"> Лицензии и сертификаты </h2>
+
+        <div class="regular2-wrapper">
+            <div class="regular2 ">
+                <div class="regular2-item xc" >
+                    <a href="img/sert.png" data-fancybox data-caption="Декларация о соответствии  ТРТС 014-2011">
+                        <img src="img/sert.png" />
+                    </a>
+                    <div class="sert-text">Декларация о соответствии  ТРТС 014-2011</div>
+                </div>
+                <div class="regular2-item xc" >
+                    <a href="img/sert.png" data-fancybox data-caption="Декларация о соответствии  ТРТС 014-2011">
+                        <img src="img/sert.png" />
+                    </a>
+                    <div class="sert-text">Декларация о соответствии  ТРТС 014-2011</div>
+                </div>
+                <div class="regular2-item xc" >
+                    <a href="img/sert.png" data-fancybox data-caption="Декларация о соответствии  ТРТС 014-2011">
+                        <img src="img/sert.png" />
+                    </a>
+                    <div class="sert-text">Декларация о соответствии  ТРТС 014-2011</div>
+                </div>
+                <div class="regular2-item xc" >
+                    <a href="img/sert.png" data-fancybox data-caption="Декларация о соответствии  ТРТС 014-2011">
+                        <img src="img/sert.png" />
+                    </a>
+                    <div class="sert-text">Протокол испытания песка  природного № Г00319</div>
+                </div>
+                <div class="regular2-item xc" >
+                    <a href="img/sert.png" data-fancybox data-caption="Декларация о соответствии  ТРТС 014-2011">
+                        <img src="img/sert.png" />
+                    </a>
+                    <div class="sert-text">Декларация о соответствии  ТРТС 014-2011</div>
+                </div>
+
             </div>
         </div>
     </div>
