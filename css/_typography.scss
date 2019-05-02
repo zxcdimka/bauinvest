@@ -66,16 +66,30 @@ input:focus{
     @extend %red-button;
     padding-left: 70px ;
     padding-right: 70px ;
+    @media (max-width: $step-lg-) and (min-width: $step-xs) {
+      height: 46px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media (max-width: $step-xs) {
+      height: 46px;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
   }
   &-mm{
     @extend %red-button;
     padding-left: 28px ;
     padding-right: 28px ;
+    @media (max-width: $step-lg-) {
+      height: 46px;
+      padding-left: 26px;
+      padding-right: 26px;
+    }
   }
 }
 
-img
-{
+img{
   @include clear-all();
   max-width: 100%;
   line-height: 1;

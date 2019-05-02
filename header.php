@@ -46,6 +46,27 @@
                         </ul>
                     </div>
                 </div>
+                <div class="hide-lg container">
+<div class="meny-mobile">
+    <input type="checkbox" id="menu-m-toggle"/>
+    <label class="label-meny" for="menu-m-toggle">
+        <i id="open" class="fas fa-bars"></i>
+        <i id="close" class="material-icons">arrow_back</i>
+    </label>
+    <ul id="menu-m">
+
+        <li><a href="">О компании</a></li>
+        <li><a href="">Продукция</a></li>
+        <li><a href="">Услуги</a></li>
+        <li><a href="">фотогалерея</a></li>
+        <li><a href="">Новости</a></li>
+        <li><a href="">Контакты</a></li>
+
+    </ul>
+</div>
+                </div>
+
+
 
             </div>
 

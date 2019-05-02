@@ -31,14 +31,12 @@
                 <i class="fa fa-times"></i>
             </div>
             <div class="form-top">
-                <div class="h-4">Обратная связь</div>
+                <div class="h-4">Обратный звонок</div>
                 <form action=""  >
                     <label for="top-form-name">Введите имя</label>
                     <input required class="input" type="text" name="name" id="top-form-name">
                     <label for="top-form-tel">Телефон для связи</label>
                     <input required class="input" type="text" name="tel" id="top-form-tel">
-                    <label for="top-form-text">Сообщение</label>
-                    <textarea required class="textarea" name="text"  id="top-form-text"></textarea>
                     <input type="submit" class="red-button-mm submit" >
                 </form>
             </div>
