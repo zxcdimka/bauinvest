@@ -34,7 +34,7 @@
 
 .hide-lg
 {
-  @media (min-width:$step-lg-) and (max-width: $step-xl)
+  @media (min-width:$step-lg-)
   {
     display: none !important;
   }
