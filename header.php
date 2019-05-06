@@ -28,7 +28,7 @@
                             <a href="javascript:vid(0)" onclick="showPopup('#showPopap_')" class="red-button-lx">ОБРАТНЫЙ ЗВОНОК</a>
                             <div class="header-info">
                                 <a href="tel:+1234567890" class="tel">+7 (495) 782-17-44</a>
-                                <a href="mailto:shop@sharodecor.ru" class="email">shop@sharodecor.ru</a>
+                                <a href="mailto:bauinvest@bk.ru" class="email">bauinvest@bk.ru</a>
                             </div>
                         </div>
 
