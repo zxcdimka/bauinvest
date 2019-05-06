@@ -79,7 +79,7 @@
             <div class="col-12 col-md-4 objem">
                 <img src="img/10mln.png" alt="">
                 <span class="h-4 " >млн м<span style="font-size: 20px;    vertical-align: super;">3</span></span>
-                <p>Объем подтвержденных <br> запасов в картере <br> «Аксиньино-1»</p>
+                <p>Объем подтвержденных <br> запасов в карьере <br> «Аксиньино-1»</p>
             </div>
         </div>
     </div>
@@ -172,21 +172,9 @@
                 <div class="regular-item xc" >
                     <img src="img/slid.png">
                 </div>
-                <div class="regular-item xc" >
+<!--            <div class="regular-item xc" >
                     <img src="img/slid.png">
-                </div>
-                <div class="regular-item xc" >
-                    <img src="img/slid.png">
-                </div>
-                <div class="regular-item xc" >
-                    <img src="img/slid.png">
-                </div>
-                <div class="regular-item xc" >
-                    <img src="img/slid.png">
-                </div>
-                <div class="regular-item xc" >
-                    <img src="img/slid.png">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -199,32 +187,32 @@
         <div class="regular2-wrapper">
             <div class="regular2 ">
                 <div class="regular2-item xc" >
-                    <a href="img/sert/1.png" data-fancybox data-caption="Декларация о соответствии ТРТС 014-2011">
-                        <img src="img/sert/1.png" />
+                    <a href="img/sert/2.png" data-fancybox data-caption="Декларация о соответствии ТРТС 014-2011">
+                        <img src="img/sert/2.png" />
                     </a>
                     <div class="sert-text">Декларация о соответствии ТРТС 014-2011</div>
                 </div>
                 <div class="regular2-item xc" >
-                    <a href="img/sert/2.png" data-fancybox data-caption="Лицензия на пользование недрами МСК 06702">
-                        <img src="img/sert/2.png" />
+                    <a href="img/sert/3.png" data-fancybox data-caption="Лицензия на пользование недрами МСК 06702">
+                        <img src="img/sert/3.png" />
                     </a>
                     <div class="sert-text">Лицензия на пользование недрами МСК 06702</div>
                 </div>
                 <div class="regular2-item xc" >
-                    <a href="img/sert/3.png" data-fancybox data-caption="Протокол испытания песка природного № Г00319">
-                        <img src="img/sert/3.png" />
+                    <a href="img/sert/4.png" data-fancybox data-caption="Протокол испытания песка природного № Г00319">
+                        <img src="img/sert/4.png" />
                     </a>
                     <div class="sert-text">Протокол испытания песка природного № Г00319</div>
                 </div>
                 <div class="regular2-item xc" >
-                    <a href="img/sert/4.png" data-fancybox data-caption="Протокол испытания песка природного № Г05019">
-                        <img src="img/sert/4.png" />
+                    <a href="img/sert/5.png" data-fancybox data-caption="Протокол испытания песка природного № Г05019">
+                        <img src="img/sert/5.png" />
                     </a>
                     <div class="sert-text">Протокол испытания песка природного № Г05019</div>
                 </div>
                 <div class="regular2-item xc" >
-                    <a href="img/sert/5.png" data-fancybox data-caption="Сертификат соответствия № РОСС RU. HA34. H04240">
-                        <img src="img/sert/5.png" />
+                    <a href="img/sert/1.png" data-fancybox data-caption="Сертификат соответствия № РОСС RU. HA34. H04240">
+                        <img src="img/sert/1.png" />
                     </a>
                     <div class="sert-text">Сертификат соответствия № РОСС RU. HA34. H04240</div>
                 </div>
