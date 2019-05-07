@@ -19,6 +19,10 @@ body{
 .header {
   display: flex;
   flex-direction: column;
+  &-bread{
+    display: flex;
+    flex-flow: row nowrap;
+  }
   &-wrapper{
     @media (max-width: $step-xs) {
       flex-flow: column;
@@ -79,6 +83,7 @@ body{
   &-meny{
     background-color: #fafafa;
     height: 80px;
+    border-bottom: 1px solid #f0f0f0;
     ul{
       display: flex;
       flex-flow: nowrap row;
@@ -604,7 +609,202 @@ footer{
       transition: .2s ease .1s;
     }
   }
+}
 
+.breadcrumb_{
+color: #8d8d8d;
+  height: 40px;
+  display: flex;
+  align-items: flex-end;
+  font-size: 12px;
+  ul{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    li{
+      list-style-type: none;
+      a{
+        color: #8d8d8d;
+        &:after{
+          content: "";
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+.map{
+  &-wrapper{
+    margin-top: 45px;
+    margin-bottom: 105px;
+  }
 }
 
 
+.ymaps-2-1-73-islets_icon-caption{
+  top:-18px !important;
+  left: 10px !important;
+}
+.ymaps-2-1-73-svg-icon {
+  background: url(../img/i-map2.png) no-repeat !important;
+  background-size: 46px 62px !important;
+  width: 46px !important;
+  height: 62px !important;
+  top:-42px !important;
+  left: -36px !important;
+}
+div>ymaps>ymaps>ymaps>ymaps>ymaps:not(:last-child) >ymaps{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/*
+iframe ymaps>ymaps>ymaps:last-child{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}*/
+
+.news{
+  &-wrapper{
+    margin-bottom: 80px;
+  }
+  &-item{
+    margin-top: 39px;
+    .img{
+      img {
+        border-radius: 4px;
+      }
+    }
+    .data{
+      @include font(16px,17px,700);
+      margin-top: 15px;
+      margin-bottom: 11px;
+    }
+    .p-text{
+      cursor: pointer;
+      @include font(16px,22px,400);
+      text-decoration: none;
+      &:hover{
+        cursor: pointer;
+        border-bottom: 1px solid #747c80;
+      }
+    }
+  }
+}
+.photo{
+  &-p{
+    margin-top: 40px;
+    margin-bottom: 19px;
+    @include font(24px,24px,700);
+  }
+  &-list{
+    margin-bottom: 60px ;
+    &:first-child{
+      width: 100%;
+    }
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -4px;
+    margin-left: -4px;
+    img{
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+    a:first-child{
+      cursor: pointer;
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+    a:not(:first-child){
+      cursor: pointer;
+      margin-top: 8px;
+      -ms-flex: 0 0 12.5%;
+      flex: 0 0 12.5%;
+      max-width: 12.5%;
+      position: relative;
+      width: 100%;
+      padding-right: 4px;
+      padding-left: 4px;
+      outline: 0;
+      @media  (max-width: $step-md){
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+    }
+  }
+}
+.product{
+  .youtube{
+    padding-bottom: 67px;
+  }
+  .map{
+    margin-bottom: 32px;
+  }
+  &-text{
+    @include font(16px,22px,400);
+    margin-bottom: 0;
+    margin-top: 22px;
+  }
+  &-h{
+    @include font(24px,24px,700);
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .gray-blok{
+    margin-top: 30px;
+    padding: 30px 30px 40px;
+    background-color: #fafafa;
+    .pesok{
+      @include font(24px,24px,700);
+      &-row{
+        margin-top: 25px;
+        display: flex;
+        flex-flow: row;
+        @media  (max-width: $step-md){
+          flex-flow: column;
+        }
+      }
+      &-item{
+        &:first-child{ max-width: 345px; margin-right: 65px}
+        &:last-child{  max-width: 390px; }
+        width: 100%;
+        border-bottom: 1px solid #b0b0b0;
+        @media  (max-width: $step-md){
+          &:first-child{ max-width: 100%; margin-right: 65px}
+          &:last-child{  max-width: 100%; margin-top: 15px }
+        }
+        p{
+          padding-bottom: 7px;
+          @include font(16px,22px,400);
+          margin-bottom: 0;
+        }
+        .objem{
+          margin-bottom: 25px;
+          @include font(36px,36px,400);
+          span{
+            &:first-child{ font-weight: 700;}
+            &:last-child{  @include font(24px,24px,400); vertical-align: super }
+          }
+          @media  (max-width: $step-mm){
+            @include font(28px,28px,400);
+          }
+        }
+      }
+    }
+    .achtung{
+      margin-top: 50px;
+      margin-bottom: 49px;
+      @include font(16px,16px,400);
+      span{
+        @include font(16px,16px,700);
+      }
+    }
+  }
+}
+.preimushestva{
+
+}

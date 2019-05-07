@@ -38,36 +38,40 @@
                     <div class="container h-100">
                         <ul class="h-100">
                             <li><a href="">О компании</a></li>
-                            <li><a href="">Продукция</a></li>
+                            <li><a href="product.php">Продукция</a></li>
                             <li><a href="">Услуги</a></li>
-                            <li><a href="">фотогалерея</a></li>
-                            <li><a href="">Новости</a></li>
-                            <li><a href="">Контакты</a></li>
+                            <li><a href="photo.php">фотогалерея</a></li>
+                            <li><a href="news.php">Новости</a></li>
+                            <li><a href="/contacts.php">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="hide-lg container">
-                    <div class="meny-mobile">
-                        <input type="checkbox" id="menu-m-toggle"/>
-                        <label class="label-meny" for="menu-m-toggle">
-                            <i id="open" class="fas fa-bars"></i>
-                            <i id="close" class="material-icons">arrow_back</i>
-                        </label>
-                        <ul id="menu-m">
-
-                            <li><a href="">О компании</a></li>
-                            <li><a href="">Продукция</a></li>
-                            <li><a href="">Услуги</a></li>
-                            <li><a href="">фотогалерея</a></li>
-                            <li><a href="">Новости</a></li>
-                            <li><a href="">Контакты</a></li>
-
-                        </ul>
+                <div class="header-bread container">
+                    <?if($_SERVER['REQUEST_URI'] != '/' && $_SERVER['REQUEST_URI'] != '/index.php'){?>
+                        <div class="breadcrumb_ ">
+                            <ul>
+                                <li><a href="">Главная</a>&nbsp;&mdash;&nbsp;</li>
+                                <li><span>Контакты</span></li>
+                            </ul>
+                        </div>
+                    <?}?>
+                    <div class="hide-lg ml-auto">
+                        <div class="meny-mobile">
+                            <input type="checkbox" id="menu-m-toggle"/>
+                            <label class="label-meny" for="menu-m-toggle">
+                                <i id="open" class="fas fa-bars"></i>
+                                <i id="close" class="material-icons">arrow_back</i>
+                            </label>
+                            <ul id="menu-m">
+                                <li><a href="">О компании</a></li>
+                                <li><a href="product.php">Продукция</a></li>
+                                <li><a href="">Услуги</a></li>
+                                <li><a href="photo.php">фотогалерея</a></li>
+                                <li><a href="news.php">Новости</a></li>
+                                <li><a href="/contacts.php">Контакты</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-
-
             </div>
-
             <div content="content">

@@ -9,6 +9,12 @@ h1, .h-1
   @include font(48px,1.2,700);
 }
 
+.h-2-2
+{
+  padding-top: 38px;
+  @include font(32px,1,700);
+}
+
 h2, .h-2
 {
   @include font(48px,1.2,700);
@@ -32,11 +38,32 @@ h4, .h-4
 p
 {
   @include font(24px,1.4,400,$text-gray);
+
 }
 input:focus{
   outline:none;
 }
+.p{
+  &-contacts{
+    @include font(16px,1.4,400);
+    margin-bottom: 0;
+    margin-top: 21px;
+  }
+  &-info-ad{
+    white-space: nowrap;
+    @include font(16px,2,400);
+    margin-bottom: 11px;
+    span{
+      width: 16px;
+      vertical-align: middle;
+      display: inline-block;
+      height: 29px;
+      background-position-x: center !important;
+      margin-right: 8px;
+    }
+  }
 
+}
 %red-button {
   @include fit-content();
   text-transform: uppercase;
@@ -88,9 +115,50 @@ input:focus{
     }
   }
 }
-
 img{
   @include clear-all();
   max-width: 100%;
   line-height: 1;
+}
+
+.spisok-yellow{
+  display: flex;
+  flex-flow: row wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  ul{
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+    @media (max-width: $step-lg-) {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      position: relative;
+      width: 100%;
+    }
+    li{
+      line-height: 18px;
+      padding-bottom: 14px;
+      list-style-type: none;
+      padding-left: 20px;
+      position: relative;
+      &:after{
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: 2px;
+        top: 6px;
+        background-color: #ffcb05;
+        border-radius: 50%;
+      }
+
+
+    }
+  }
 }
